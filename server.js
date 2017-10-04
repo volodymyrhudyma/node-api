@@ -2,13 +2,15 @@
 
 var express = require('express'),
 	fs = require('fs'),
-	config = require('./libs/config');
+	config = require('./libs/config'),
+	passport = require('passport');
 
 var app = express();
 
 app.configure(function(){
     app.use(express.bodyParser());
 	app.use(express.logger('dev'));
+	app.use(passport.initialize());
 });
 
 require('./libs/mongoose');
