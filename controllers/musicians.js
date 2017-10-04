@@ -3,6 +3,7 @@ Musician = mongoose.model('Musician');
 
 exports.findAll = function(req, res){
   Musician.find({},function(err, results) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8000');
     return res.send(results);
   });
 };

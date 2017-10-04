@@ -1,19 +1,12 @@
 var mongoose = require('mongoose'),
-Schema = mongoose.Schema;
-
-var Images = new Schema({
-    kind: {
-        type: String,
-        enum: ['thumbnail', 'detail']
-    },
-    url: { type: String }
-});
+	Image = require('./image'),
+	Schema = mongoose.Schema;
 
 var MusicianSchema = new Schema({
-  name: String,
-  band: String,
-  instrument: String,
-  images: [Images]
+    name: String,
+    band: String,
+    instrument: String,
+    image: [Image]
 });
 
 mongoose.model('Musician', MusicianSchema);
