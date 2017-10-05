@@ -3,7 +3,8 @@
 var express = require('express'),
 	fs = require('fs'),
 	config = require('./libs/config'),
-	passport = require('passport');
+	passport = require('passport'),
+	cors = require('cors');
 
 var app = express();
 
@@ -11,6 +12,7 @@ app.configure(function(){
     app.use(express.bodyParser());
 	app.use(express.logger('dev'));
 	app.use(passport.initialize());
+	app.use(cors());
 });
 
 require('./libs/mongoose');

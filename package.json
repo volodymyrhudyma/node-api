@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "cors": "^2.8.4",
     "express": "3.x",
     "nconf": "^0.8.5",
     "passport": "^0.4.0",
