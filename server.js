@@ -16,7 +16,9 @@ app.configure(function(){
 });
 
 require('./libs/mongoose');
-require('./models/musician');
+require('./models/project');
+require('./models/technology');
+require('./models/issue');
 require('./routes')(app);
 
 var port = config.get('port');
